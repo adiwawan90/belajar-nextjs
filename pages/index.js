@@ -1,25 +1,29 @@
+import Layout from '@common/components/layout'
 import Link from 'next/link'
 
 const HomePage = ({ products }) => {
   const { list } = products;
   return (
-    <div className="container">
+    <Layout>
 
-      <Link href="/about" >
-        <a>Menuju About Page</a>
-      </Link>
-      {list.map((item) => {
-        return (
-          <div key={item.id}>
-            <ul>
-              <li>{ item.name }</li>
-            </ul>
-          </div>
-        )
-      })}
+      <div className="container">
+
+        <Link href="/about" >
+          <a>Menuju About Page</a>
+        </Link>
+        {list.map((item) => {
+          return (
+            <div key={item.id}>
+              <ul>
+                <li>{ item.name }</li>
+              </ul>
+            </div>
+          )
+        })}
 
 
-    </div>
+      </div>
+    </Layout>
   )
 }
 
