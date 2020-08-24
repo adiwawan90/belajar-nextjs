@@ -2,7 +2,7 @@ import React from 'react'
 import {makeStyles} from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
 
-import MobileHeader from '../../../mobile/components/Header'
+import MobileHeader from '@mobile/components/Header'
 
 // make style using MUI
 const useStyles = makeStyles({
@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
     )
 }
 
-Layout.PropTypes = {
+Layout.PropTypes = { 
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node
