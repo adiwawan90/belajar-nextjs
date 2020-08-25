@@ -1,6 +1,27 @@
+import Layout from '@common/components/layout'
+import Container from '@material-ui/core/Container'
+import ProductDetailCard from '@mobile/components/ProductDetailCard'
+
 const ProductDetail = ({ product }) => {
+    const { img, name, price, rating, sold, description, quantity, condition, weight, promo } = product
+
     return (
-        <h2>{product.name}</h2>
+        <Layout>
+            <Container maxWidth="sm">
+                <ProductDetailCard 
+                    img={img}
+                    title={name}
+                    price={price}
+                    rating={rating}
+                    sold={sold}
+                    desc={description}
+                    qty={quantity}
+                    condition={condition}
+                    weight={weight}
+                    promo={promo}
+                />
+            </Container>
+        </Layout>
     )
 }
 
