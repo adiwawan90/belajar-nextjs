@@ -16,6 +16,7 @@ import theme from 'theme'
 
 import ProductRating from '@common/components/ProductRating'
 import {currencyFormatter} from '@utils/currency'
+import PromoCard from '@common/components/PromoCard'
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -131,6 +132,7 @@ const ProductDetailCard = ({ img, title, price, rating, sold, desc, qty, conditi
                     </CardContent>
                 </Collapse>
             </Card>
+            <PromoCard promo={promo} />
         </div>
     )
 }
