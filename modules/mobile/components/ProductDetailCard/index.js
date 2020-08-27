@@ -17,6 +17,7 @@ import theme from 'theme'
 import ProductRating from '@common/components/ProductRating'
 import {currencyFormatter} from '@utils/currency'
 import PromoCard from '@common/components/PromoCard'
+import ProductInfoPanel from '@common/components/ProductInfoPanel'
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -133,6 +134,12 @@ const ProductDetailCard = ({ img, title, price, rating, sold, desc, qty, conditi
                 </Collapse>
             </Card>
             <PromoCard promo={promo} />
+            <ProductInfoPanel judul="Product Info 1" content="Product 1. Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Suspendise malesuadalacus ex,
+                        sit amet blandit leo lobortis eget." />
+            <ProductInfoPanel judul="Product Info 2" content="Product 2. Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Suspendise malesuadalacus ex,
+                        sit amet blandit leo lobortis eget." />
+            <ProductInfoPanel judul="Product Info 3" content="Product 3 . Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Suspendise malesuadalacus ex,
+                        sit amet blandit leo lobortis eget." />
         </div>
     )
 }
