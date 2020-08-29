@@ -45,9 +45,9 @@ const PromoCard = ({promo}) => {
     if (promo.length > 0) {
         return(
             <Grid container spacing={1}>
-                {promo.map((prm) => {
+                {promo.map((prm, i) => {
                     return (
-                        <Grid item xs={breakPoint} sm={breakPoint}>
+                        <Grid item xs={breakPoint} sm={breakPoint} key={i}>
                             <Paper variant="outlined" classes={{root: classes.root}}>
                                 <Typography>
                                     {prettyPromoLabel(prm)}
